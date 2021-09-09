@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    background-color: white;
+}
+
+.header a {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+}
+
+.header .logo {
+    max-width: 150px;
+    height: auto;
+    z-index: 2;
+}
+
+.page-title {
+    padding-left: 3rem;
+    color: #00a99d;
+}

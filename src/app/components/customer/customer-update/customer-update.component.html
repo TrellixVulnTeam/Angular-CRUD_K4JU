@@ -1,0 +1,66 @@
+<form class="row g-3" #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div class="col-md-3" id="oi">
+      <label for="cpf" class="form-label">CPF</label>
+      <input type="text" class="form-control" id="cpf" required [(ngModel)] ='customer.cpf' name="cpf" maxlength="11" autocomplete="nope" [class.ng-invalid] = "verifyCPF(customer.cpf) === false " [class.ng-valid]="verifyCPF(customer.cpf) === true"  onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+      <div class="valid-feedback">
+        CPF válido.
+      </div>
+      <div class="invalid-feedback">
+        CPF inválido.
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="nome" class="form-label">Nome</label>
+      <input type="text" class="form-control" name="nome" [(ngModel)] = customer.nome autocomplete="nope" id="nome" required>
+      <div class="valid-feedback">
+        Nome válido.
+      </div>
+      <div class="invalid-feedback">
+        Nome inváliido.
+      </div>
+    </div>
+    <div class="col-md-3 form-group">
+      <label for="sexo" class="form-label">Sexo</label>
+      <select class="form-select" id="sexo" name="sexo" [(ngModel)] = customer.sexo required>
+        <option>M</option>
+        <option>F</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label for="dat_nasc" class="form-label">Data de Nascimento</label>
+        <input type="text" class="form-control" [(ngModel)] = customer.dat_nasc name="dat_nasc" id="dat_nasc" required>
+        <div class="valid-feedback">
+          Data de nascimento válida.
+        </div>
+        <div class="invalid-feedback">
+          Please choose a username.
+        </div>
+    </div>
+    <div class="col-md-4">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" name="email" [(ngModel)] = customer.email id="email" email required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+      <div class="invalid-feedback">
+        Email inválido.
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="phone" class="form-label">Telefone</label>
+      <input type="text" class="form-control" [(ngModel)] = customer.phone name="phone" id="phone" aria-describedby="phone" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+      <div class="invalid-feedback">
+        Telefone inválido.
+      </div>
+    </div>
+    
+    <div class="col-1">
+      <button class="btn" style="background-color: #00a99d; color: white;" [disabled]="!f.valid" type="submit" (click)="updateCustomer()">Salvar</button>
+    </div>
+    <div class="col-11">
+      <button class="btn btn-danger" (click)="cancel()">Cancelar</button>
+    </div>
+</form>

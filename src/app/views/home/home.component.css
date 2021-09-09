@@ -1,0 +1,22 @@
+
+.my-card {
+    
+    padding: 2rem;
+}
+
+.my-card mat-card-content {
+    margin-top: 2rem;
+}
+
+.my-card mat-card-title {
+    font-size: 2rem;
+}
+
+.my-card mat-card-content {
+    font-size: 1rem;
+}
+
+.my-card .title {
+    color: #00a99d;
+}
+

@@ -1,0 +1,16 @@
+.full-width-table {
+    width: 100%;
+}
+
+.edit, .delete {
+    margin-right: 0.5rem;
+}
+
+.edit {
+    color: #00a99d;
+}
+
+.delete {
+    color: rgb(255, 100, 100)
+}
+  
